@@ -1,4 +1,4 @@
-import { FaStar } from "react-icons/fa";
+import { FaChevronDown, FaSearch, FaStar } from "react-icons/fa";
 
 const Hero = () => {
   const rating = [
@@ -15,9 +15,12 @@ const Hero = () => {
       text: "Cool text matching",
     },
   ];
+  const jobType=[
+    "Remote","Work From Home","Part Time","Design"
+  ]
 
   return (
-    <div className="pt-20 flex flex-col items-center">
+    <div className="pt-20 flex flex-col items-center p-4 md:p-0">
       <div className="flex xl:gap-20 gap-10 items-center justify-center flex-wrap">
         {rating.map((item, index) => (
           <div
@@ -41,6 +44,36 @@ const Hero = () => {
           connecting <br /> you with employers who value your skills and
           experience
         </p>
+      <div className="flex items-center justify-center gap-10 md:flex-row flex-col ">
+      <form action="" className="md:w-[500px] w-[320px]">
+          <div className="relative">
+            <input
+              type="search"
+              className=" w-full pl-8 pr-8 pt-4 pb-4 bg-slate-600  rounded-lg focus:outline-none placeholder:text-[#828DA9]"
+              placeholder="Company or Industry"
+            />
+            <button className="absolute left-1 top-1/2 -translate-y-1/2 p-2 ">
+              <FaSearch className="text-[#828DA9]" />
+            </button>
+            <div className="flex absolute right-1 top-1/2 -translate-y-1/2 p-2 items-center justify-center gap-2 text-[#828DA9]">
+              <div className=" border-l-2 border-l-[#828DA9] p-4 bg-slate-600">
+              </div>
+              <p>20 mi</p>
+              <FaChevronDown/>
+            </div>
+          </div>
+        </form>
+        <button className="bg-blue-600 p-4 w-[130px] rounded-md font-medium">Search</button>
+
+      </div>
+     
+      </div>
+      <div className="flex items-center justify-center gap-10 pt-5 flex-wrap">
+             {
+              jobType.map((item,index)=>(
+                <p key={index} className="text-blue-500 bg-[#828DA9] bg-opacity-20 p-2 rounded-md ">{item}</p>
+              ))
+             }
       </div>
     </div>
   );
