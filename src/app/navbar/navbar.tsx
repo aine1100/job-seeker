@@ -15,7 +15,7 @@ const Navbar = () => {
 
 
   return (
-    <div className="w-full  flex items-center md:justify-center top-0 z-50 bg-transparent md:gap-10 justify-between xl:gap-44 md:pb-10 ">
+    <div className="w-full  flex items-center md:justify-center top-0 z-50 bg-transparent md:gap-10 justify-between xl:gap-44 md:pb-20 pl-2 pr-2">
       <Image src={Logo} alt="Logo" className="h-8 md:h-10 w-36" />
       <div className={`fixed inset-0 bg-black bg-opacity-95 flex flex-col items-center justify-center xl:gap-44 gap-10 transition-transform transform ${menuOpen ? 'translate-x-0' : '-translate-x-full'} md:transform-none md:static md:flex md:flex-row md:gap-6 md:bg-transparent`}>
         <button className="absolute top-4 right-4 text-2xl md:hidden text-white" onClick={toggleMenu}>
